@@ -1,14 +1,15 @@
-import { View, Text, Button } from 'react-native'
+import { SafeAreaView, Text, Button } from 'react-native'
 import React from 'react'
-import { useClerk } from '@clerk/clerk-expo'
+
+import SignOutButton from '@/components/SignOutButton'
 
 const HomeScreen = () => {
-  const {signOut}=useClerk()
+
   return (
-    <View>
+    <SafeAreaView className='flex-1 ' >
       <Text>HomeScreen</Text>
-      <Button onPress={()=>signOut()} title='logOut'></Button>
-    </View>
+      <SignOutButton/>
+    </SafeAreaView>
   )
 }
 
