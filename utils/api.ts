@@ -1,6 +1,6 @@
 import axios ,{AxiosInstance} from 'axios'
 import { useAuth, useClerk } from '@clerk/clerk-expo'
-const API_BASE_URL="https://x-clone-react-native-sigma.vercel.app/api"
+const API_BASE_URL="x-clone-rn.vercel.app/api"
 
 export const createApiClient=(getToken:()=>Promise<string | null>):AxiosInstance=>{
 const api=axios.create({baseURL:API_BASE_URL});
